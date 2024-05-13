@@ -15,6 +15,7 @@ function randomizeStratagems() {
     if (stratagemList.length >= 4) break;
 
     const stratagem = stratagems[Math.floor(Math.random() * stratagems.length)];
+    if (stratagemList.includes(stratagem.name)) continue;
     if (backpack && stratagem.backpack) continue;
     if (supportWeapon && stratagem.supportWeapon) continue;
 
